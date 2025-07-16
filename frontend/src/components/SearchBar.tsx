@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiSearch } from 'react-icons/fi';
+import { Search } from 'lucide-react';
 
 const popularTerms = [
   'summer essentials',
@@ -12,7 +12,7 @@ const popularTerms = [
   'nike dunk low',
 ];
 
-function Search() {
+function SearchBar() {
   const [open, setOpen] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ function Search() {
         className="flex items-center px-3 py-1.5 rounded-full bg-gray-100 cursor-pointer hover:bg-gray-200"
         onClick={() => setOpen(true)}
       >
-        <FiSearch className="text-gray-600 mr-2" />
+        <Search className="text-gray-600 mr-2" />
         <span className="text-gray-500">Search</span>
       </div>
 
@@ -30,7 +30,7 @@ function Search() {
       {open && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-95 text-white p-6 overflow-y-auto">
           <div className="flex items-center mb-6">
-            <FiSearch className="text-2xl mr-3" />
+            <Search className="text-2xl mr-3" />
             <input
               autoFocus
               type="text"
@@ -65,4 +65,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default SearchBar;

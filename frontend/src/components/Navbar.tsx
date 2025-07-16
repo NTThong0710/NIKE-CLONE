@@ -1,7 +1,5 @@
-import React from 'react'
-import { CiHeart } from 'react-icons/ci'
-import { IoBagAddOutline } from 'react-icons/io5'
-import { TbBasketSearch } from 'react-icons/tb'
+
+import { Heart, Search, ShoppingBasket } from 'lucide-react';
 import { useState } from 'react'
 
 function Navbar() {
@@ -9,7 +7,7 @@ function Navbar() {
   return (
     <div className='border-b'>
         <div className='flex justify-between items-center px-6 py-3 bg-neutral-100'>
-            <div className='flex items-center space-x-4'>
+            <div className='flex items-center space-x-4 ml-8'>
                 <img 
                     src="https://logowik.com/content/uploads/images/342_jordan.jpg" 
                     alt="Logo Jordan"
@@ -20,20 +18,22 @@ function Navbar() {
                 <a href="">Find a Store   | </a>
                 <a href="">Help   | </a>
                 <a href="">Join us   | </a>
-                <a href="">Sign In</a>
+                <a href="/login">Sign In</a>
             </div>
         </div>
 
         <div className='flex justify-between items-center px-6 py-3 bg-white'>
             <div>
-                <img 
+                <a href="/">
+                    <img 
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyLm5slutBUNwHWoLsUO88g_lHcndcT_eZPQ&s" 
                     alt="Logo Nike"
-                    className='h-8 w-auto' 
+                    className='ml-8 h-12 w-18'   
                 />
+                </a>  
             </div>
 
-            <div className='hidden md:flex space-x-6 items-center font-medium text-base'>
+            <div className='hidden md:flex space-x-6 items-center font-medium text-base flex-1 justify-center'>
                 <a href="#" className='hover:underline'>New & Feature</a>
                 <a href="#" className='hover:underline'>Men</a>
                 <a href="#" className='hover:underline'>Women</a>
@@ -49,7 +49,7 @@ function Navbar() {
                     className="pl-8 pr-3 py-1.5 border border-gray-300 text-stone-300 rounded-full text-sm bg-gray-100 hover:bg-gray-200 outline-none"
                     onClick={() => setOpen(true)}
                     />
-                    <span className="absolute left-2 top-1.5 text-gray-500 bg-black-100 hover:bg-black-200"><TbBasketSearch/></span>    
+                    <span className="absolute left-2 top-1.5 text-gray-500 bg-black-100 hover:bg-black-200"><Search/></span>    
                 </div>
                 {open && (
                     <div className="fixed top-0 left-0 w-full h-screen bg-white z-50 p-6 overflow-y-auto transition-all duration-300 ease-in-out">
@@ -60,7 +60,7 @@ function Navbar() {
                                 className='h-18 w-auto' 
                             />
                         <div className="flex items-center w-full max-w-2xl bg-gray-100 px-4 py-2 rounded-full">
-                            <TbBasketSearch className='mr-3'/>
+                            <Search className='mr-3'/>
                             <input
                             autoFocus
                             type="text"
@@ -102,8 +102,8 @@ function Navbar() {
                     </div>
                 )}
 
-                <a href="#" className=''><CiHeart/></a>
-                <a href="#"><IoBagAddOutline/></a>
+                <a href="#" className=''><Heart/></a>
+                <a href="#"><ShoppingBasket/></a>
             </div>
         </div>  
     </div>

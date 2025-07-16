@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 px-6 py-10 text-sm text-gray-600">
+    <footer className="bg-black border-t border-gray-200 px-6 py-10 text-sm text-gray-600">
   {/* Top Section */}
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between space-y-10 md:space-y-0">
     {/* 3 Cột chính */}

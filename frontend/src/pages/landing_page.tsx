@@ -116,7 +116,7 @@ const landing = () => {
             <p className=' text-base font-semibold text-black'>Structure 26</p>
             <h3 className='text-7xl font-extrabold uppercase'>RUN SUPPORTED</h3>
             <p className='mt-2 text-base font-normal text-black '>Supportive cushioning to help keep runners running</p>
-            <div>
+            <div className='mt-4'>
               <a href="#" 
                 aria-label="Shop on App" 
                 type="button"
@@ -152,29 +152,32 @@ const landing = () => {
           <video src={videoAds} controls autoPlay muted loop className="w-[90%] max-w-[960px] h-auto max-h-[500px]"></video>
         </div>
         {/* New Arrivals */}
-        <h2 className="text-3xl font-medium mt-12 mb-6 ml-4 sm:ml-10">New Arrivals</h2>
-
-<div className="overflow-x-auto px-4  flex scrollbar-hide">
-  {newArrivals.map((product, index) => (
-    <div
-      key={index}
-      className="flex-shrink-0 w-[160px] sm:w-[180px] md:w-[200px] lg:w-[400px] bg-white ml-5"
-    >
-      <img
-        src={product.imageURL}
-        alt={product.name}
-        className="w-full h-[120px] sm:h-[130px] md:h-[150px] lg:h-[400px] object-cover mb-2"
-      />
-      <h3 className="text-sm sm:text-base font-semibold">{product.name}</h3>
-      <p className="text-sm text-gray-500 font-normal">{product.category}</p>
-      <p className="mt-2 font-semibold text-base text-black">
-        {product.price.toLocaleString()}₫
-      </p>
-    </div>
-  ))}
-</div>
-
-
+        <div className='flex justify-between'>
+          <h2 className="text-3xl font-medium mt-12 mb-6 ml-4 sm:ml-10">New Arrivals</h2>
+          <div>
+            <h2 className='text-3xl font-medium mt-12 mb-6 mr-4 sm:ml-10'>Shop</h2>
+          </div>
+        </div>
+        
+        <div className="overflow-x-auto px-4  flex scrollbar-hide">
+          {newArrivals.map((product, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-[160px] sm:w-[180px] md:w-[200px] lg:w-[400px] bg-white ml-5"
+            >
+              <img
+                src={product.imageURL}
+                alt={product.name}
+                className="w-full h-[120px] sm:h-[130px] md:h-[150px] lg:h-[400px] object-cover mb-2"
+              />
+              <h3 className="text-sm sm:text-base font-semibold">{product.name}</h3>
+              <p className="text-sm text-gray-500 font-normal">{product.category}</p>
+              <p className="mt-2 font-semibold text-base text-black">
+                {product.price.toLocaleString()}₫
+              </p>
+            </div>
+          ))}
+        </div>
       </a>
       <Footer/>
     </div>

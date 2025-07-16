@@ -1,13 +1,16 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './pages/landing_page'
+import Login from './pages/Login'
 import './index.css'
 
 const App = () => {
   return (
-    <div className='text-4xl font-bold'>
-      <Landing/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login/>} />
+      </Routes>
+    </Router>
   )
 }
 
